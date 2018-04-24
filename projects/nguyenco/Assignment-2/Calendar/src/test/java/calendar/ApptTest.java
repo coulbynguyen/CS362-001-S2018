@@ -18,10 +18,17 @@ public class ApptTest  {
       assertEquals(0, appt0.getRecurIncrement());
       appt0.setValid();
   }
-@Test(timeout = 4000)
- public void test01()  throws Throwable  {
 
+  @Test
+  public void test01() {
+	Appt testAppt = new Appt(15,30, 9, 14, 2018, "Homework", "Homework Assignment is Due Today", "nguyenco@oregonstate.edu");
+	//first to check that its a valid date entry
+	assertEquals(true, testAppt.getValid());
+	//check to see if the hour was set correctly
+	assertEquals(15, testAppt.getStartHour());
+	//check to see if the title is set correctly
+	assertEquals("Homework", testAppt.getTitle());
 
-}
+  }
 
 }
