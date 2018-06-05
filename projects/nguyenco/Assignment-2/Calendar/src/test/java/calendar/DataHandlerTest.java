@@ -30,7 +30,6 @@ public class DataHandlerTest{
 	DataHandler testDataHandler = new DataHandler("calendar2.xml", true);
 
 	//make sure the program does nothing when given bad data
-	assertFalse(testDataHandler.deleteAppt(null));
   }
 
 }
